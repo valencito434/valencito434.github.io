@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Feliz Día de la Madre</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&family=Caveat:wght@600&display=swap">
+<style>
+  :root {
+    --bg: #f7eef2;
+    --paper: #fffafc;
+    --ink: #2f1b2c;
+    --muted: #6d5566;
+    --accent: #b3366a;
+    --petal: #e0749f;
+    --petal-2: #f2b3cc;
+    --leaf: #4a7a58;
+    --line: #ecd5df;
+    --font-display: "Young Serif", Georgia, "Times New Roman", serif;
+    --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-hand: "Caveat", "Segoe Script", "Brush Script MT", cursive;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1d1219;
+      --paper: #2a1a25;
+      --ink: #f8e9f0;
+      --muted: #c9aebd;
+      --accent: #f08ab4;
+      --leaf: #7cb88c;
+      --line: #4a3043;
+      color-scheme: dark;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.65;
+    padding-block: 28px 40px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+  }
+
+  .wrap {
+    max-width: 620px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .date {
+    margin: 0;
+    text-align: center;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 28px 28px 34px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    box-shadow: 0 18px 40px -26px color-mix(in srgb, var(--accent) 55%, transparent);
+  }
+
+  .flower {
+    width: 112px;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+    transform-origin: 50% 90%;
+    animation: sway 6s ease-in-out infinite;
+  }
+  @keyframes sway {
+    0%, 100% { transform: rotate(-2.5deg); }
+    50% { transform: rotate(2.5deg); }
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(2rem, 8.4vw, 3rem);
+    line-height: 1.1;
+    text-align: center;
+    text-wrap: balance;
+    color: var(--accent);
+  }
+  .sub {
+    margin: -10px 0 0;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 4.6vw, 1.5rem);
+    color: var(--ink);
+  }
+
+  .rule {
+    width: 56px;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--petal-2);
+    align-self: center;
+    border: 0;
+    margin: 0;
+  }
+
+  .letter { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+  .letter p { margin: 0; max-width: 62ch; text-wrap: pretty; }
+  .letter .lead {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .letter .love { font-weight: 600; color: var(--accent); }
+  .letter .note {
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+    color: var(--muted);
+  }
+
+  .sign {
+    margin: 4px 0 0;
+    align-self: flex-end;
+    font-family: var(--font-hand);
+    font-weight: 600;
+    font-size: 2.1rem;
+    line-height: 1;
+    color: var(--accent);
+    transform: rotate(-3deg);
+  }
+
+  @media (max-width: 440px) {
+    body { font-size: 17px; }
+    .card { padding: 24px 20px 28px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .flower { animation: none; }
+  }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <p class="date">Domingo 18 de octubre de 2026</p>
+
+  <article class="card">
+    <svg class="flower" viewBox="0 0 120 150" role="img" aria-label="Una flor rosa">
+      <path d="M60 78 C60 105 58 125 60 148" stroke="var(--leaf)" stroke-width="5" stroke-linecap="round" fill="none"/>
+      <path d="M60 118 C42 116 30 104 28 92 C44 92 56 100 60 118 Z" fill="var(--leaf)"/>
+      <path d="M60 130 C78 128 90 116 92 104 C76 104 64 112 60 130 Z" fill="var(--leaf)"/>
+      <g transform="translate(60 52)">
+        <ellipse cx="0" cy="-26" rx="15" ry="26" fill="var(--petal-2)"/>
+        <ellipse cx="0" cy="-26" rx="15" ry="26" fill="var(--petal)" transform="rotate(72)"/>
+        <ellipse cx="0" cy="-26" rx="15" ry="26" fill="var(--petal-2)" transform="rotate(144)"/>
+        <ellipse cx="0" cy="-26" rx="15" ry="26" fill="var(--petal)" transform="rotate(216)"/>
+        <ellipse cx="0" cy="-26" rx="15" ry="26" fill="var(--petal-2)" transform="rotate(288)"/>
+        <circle r="13" fill="var(--accent)"/>
+        <circle r="5" fill="var(--paper)"/>
+      </g>
+    </svg>
+
+    <h1>¡Feliz Día de la Madre!</h1>
+    <p class="sub">o de la familia</p>
+    <hr class="rule">
+
+    <div class="letter">
+      <p class="lead">Pero te voy a decir algo, mamá.</p>
+      <p>Gracias por todo lo que nos diste en todos estos años. Gracias por darnos techo, cama, luz, gas y el pan de cada día. Lo agradecemos en silencio.</p>
+      <p>Muchas gracias por el amor, la paciencia y el aprecio por tantas cosas. Y aunque damos pasos cortos, vos lo celebrás como si hubiéramos dado un paso muy grande.</p>
+      <p>Gracias por tomarte el tiempo de leer esto. <span class="love">Todos te amamos.</span></p>
+      <p class="note">Y recordá: si algo te pasa, contanos a nosotros. Somos tus hijos y tu esposo.</p>
+    </div>
+
+    <p class="sign">Att. Triki</p>
+  </article>
+</main>
+</body>
+</html>
